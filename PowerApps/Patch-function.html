@@ -8,7 +8,7 @@ The return value of Patch is the record that you modified or created.
 The values of specific fields are modified without affecting other properties.
 
 Update a record:
-Patch( DATA_SOURCE, ITEM_TO_MODIFY, PROPERTIES_TO_UPDATE )
+Patch( DataSource, BaseRecord, ChangeRecord1 [, ChangeRecord2, … ])
 Patch( Customers, First( Filter( Customers, Name = "Contoso" ) ), { Phone: "1-212-555-1234" } )
 
 Create a record:
@@ -22,3 +22,7 @@ Patch( { Name: "Contoso", Phone: "1-212-555-1234" }, { Name: "Contoso", Location
 
 
 >>>> Patch can also be used to create or modify multiple records with a single call.
+Patch( DataSource, BaseRecordsTable, ChangeRecordTable1 [, ChangeRecordTable2, … ] )
+
+>>>>>Use of As or ThisRecord
+>>>>>Using As or ThisRecord
