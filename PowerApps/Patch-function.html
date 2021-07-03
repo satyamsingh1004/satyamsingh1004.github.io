@@ -14,3 +14,7 @@ Create a record:
 Use Patch with the Defaults function to create records. 
 Patch( DATA_SOURCE, Defaults(DATA_SOURCE), PROPERTIES_TO_UPDATE )
 Patch( Customers, Defaults( Customers ), { Name: "Contoso" } )
+
+Even if you're not working with a data source, you can use Patch to merge two or more records.
+Patch( RECORD1, RECORD2 )
+Patch( { Name: "Contoso", Phone: "1-212-555-1234" }, { Name: "Contoso", Location: "Midtown" } )
